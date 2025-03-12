@@ -23,7 +23,7 @@ import {
   TableOfContents,
   TOCItem,
 } from './style';
-
+import { isMobile } from '../../../components/utils/constants';
 const CRMToolsBlog = () => {
   return (
     <MainContainer>
@@ -83,7 +83,9 @@ const CRMToolsBlog = () => {
         <BackgroundDot top={80} left={20} delay={3} />
       </AnimatedBackground>
 
-      <Header />
+      <Header  isMobile = {isMobile}>
+
+        </Header>
       <Announcements />
 
       <BlogContainer>

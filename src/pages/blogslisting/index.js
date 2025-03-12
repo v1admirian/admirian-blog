@@ -184,7 +184,9 @@ const BlogListing = () => {
         <BackgroundDot top={80} left={20} delay={3} />
       </AnimatedBackground>
 
-      <Header />
+      <Header  isMobile = {isMobile}>
+
+        </Header>
       <a href="https://admirian.com/request-demo" style={{ textDecoration: 'none' }}>
         <AnnouncementContainer isMobile={isMobile}>
           <span>

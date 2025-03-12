@@ -30,7 +30,7 @@ import {
   ShareButton,
   RelatedArticleCard
 } from './style';
-
+import { isMobile } from '../../../components/utils/constants';
 const tableOfContents = [
   { id: 'intro', title: 'Introduction' },
   { id: 'who-are-nanos', title: 'Who Are Nano-Influencers?' },
@@ -101,7 +101,9 @@ const NanoInfluencers2025 = () => {
         <BackgroundDot size={10} top={80} left={90} delay={3} />
       </AnimatedBackground>
 
-      <Header />
+      <Header  isMobile = {isMobile}>
+
+        </Header>
       <Announcements />
 
       <BlogContainer>

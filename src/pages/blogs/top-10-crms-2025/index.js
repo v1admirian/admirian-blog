@@ -34,7 +34,7 @@ import {
   RelatedArticles,
   RelatedArticleCard
 } from './style';
-
+import { isMobile } from '../../../components/utils/constants';
 const tableOfContents = [
   { id: 'intro', title: 'Introduction' },
   { id: 'why-crm', title: 'Why Influencer CRM Matters' },
@@ -248,7 +248,9 @@ const Top10CRMs2025 = () => {
         <BackgroundDot size={10} top={80} left={90} delay={3} />
       </AnimatedBackground>
 
-      <Header />
+      <Header  isMobile = {isMobile}>
+
+        </Header>
       <Announcements />
 
       <BlogContainer>
