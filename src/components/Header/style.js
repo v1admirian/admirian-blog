@@ -14,6 +14,7 @@ export const HeaderContainer = styled.div`
   position: fixed;
   top: ${(props) => (props.isScrolled ? '0px' : '50px')};  /* Adjusted top value */
   transition: top 0.3s ease-in-out;
+
 `;
 
 export const MasterLayoutStyle = styled.div`

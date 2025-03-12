@@ -67,7 +67,8 @@ export const BackgroundDot = styled.div`
 export const BlogContainer = styled.div`
   max-width: 1200px;
   margin: 2rem auto;
-  padding: 0 2rem;
+  padding: 0 2rem;  
+  padding-top: 60px;
 `;
 
 export const BlogHeader = styled.header`
