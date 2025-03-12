@@ -32,7 +32,7 @@ import { isMobile } from '../../components/utils/constants';
 
 const BlogListing = () => {
   const [searchQuery, setSearchQuery] = useState('');
-  const [activeCategory, setActiveCategory] = useState('all');
+  const [activeCategory, setActiveCategory] = useState('All');
   const [filteredBlogs, setFilteredBlogs] = useState([]);
 
   // Sample blog data with trend-focused articles
@@ -45,7 +45,7 @@ const BlogListing = () => {
       readTime: "15 min read",
       category: "For Agency",
       image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&auto=format&fit=crop&q=60",
-      link: `#/blogs/top-10-crms-2025`
+      link: "#/blogs/top-10-crms-2025"
     },
     {
       id: 2,
@@ -55,7 +55,7 @@ const BlogListing = () => {
       readTime: "12 min read",
       category: "For Brands",
       image: "https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?w=800&auto=format&fit=crop&q=60",
-      link: `#/blogs/nano-influencers-2025`
+      link: "#/blogs/nano-influencers-2025"
     },
     {
       id: 3,
@@ -65,7 +65,7 @@ const BlogListing = () => {
       readTime: "12 min read",
       category: "Case Studies",
       image: "https://images.unsplash.com/photo-1557804506-669a67965ba0?w=800&auto=format&fit=crop&q=60",
-      link: `#/blogs/micro-vs-macro-influencers`
+      link: "#/blogs/micro-vs-macro-influencers"
     },
     {
       id: 4,
@@ -75,7 +75,7 @@ const BlogListing = () => {
       readTime: "15 min read",
       category: "For Agency",
       image: "https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&auto=format&fit=crop&q=60",
-      link: `${process.env.PUBLIC_URL}/blogs/how-to-negotiate-with-influencers`
+      link: "#/blogs/how-to-negotiate-with-influencers"
     },
     {
       id: 5,
@@ -85,7 +85,7 @@ const BlogListing = () => {
       readTime: "8 min read",
       category: "Case Studies",
       image: "https://images.unsplash.com/photo-1553877522-43269d4ea984?w=800&auto=format&fit=crop&q=60",
-      link: `${process.env.PUBLIC_URL}/blogs/agency-success-1000-influencers`
+      link: "#/blogs/agency-success-1000-influencers"
     },
     {
       id: 6,
@@ -95,7 +95,7 @@ const BlogListing = () => {
       readTime: "9 min read",
       category: "For Brands",
       image: "https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?w=800&auto=format&fit=crop&q=60",
-      link: `${process.env.PUBLIC_URL}/blogs/influencer-content-rights`
+      link: "#/blogs/influencer-content-rights"
     },
     {
       id: 7,
@@ -105,7 +105,7 @@ const BlogListing = () => {
       readTime: "10 min read",
       category: "For Brands",
       image: "https://images.unsplash.com/photo-1611162616475-46b635cb6868?w=800&auto=format&fit=crop&q=60",
-      link: `${process.env.PUBLIC_URL}/blogs/how-to-use-crm-tools`
+      link: "#/blogs/how-to-use-crm-tools"
     }
   ];
 
@@ -124,17 +124,17 @@ const BlogListing = () => {
       );
     }
 
-    if (activeCategory !== 'all') {
+    if (activeCategory !== 'All') {
       filtered = filtered.filter(blog => blog.category === activeCategory);
     }
 
     setFilteredBlogs(filtered);
-  }, [searchQuery, activeCategory]);
+  }, [searchQuery, activeCategory, blogs]);
 
+  // Initialize filtered blogs
   useEffect(() => {
-    // Add blogs to dependency array
     setFilteredBlogs(blogs);
-  }, [blogs]);
+  }, []);
 
   return (
     <BlogListingContainer>
