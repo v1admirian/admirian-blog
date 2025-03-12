@@ -516,9 +516,23 @@ export const AnimatedEmoticon = styled.span`
 
 export const SearchContainer = styled.div`
   margin: 2rem auto;
-  max-width: 600px;
+  max-width: 800px;
   width: 100%;
   position: relative;
+  padding: 0 1.5rem;
+  box-sizing: border-box;
+
+  @media (max-width: 768px) {
+    margin: 1.5rem auto;
+    padding: 0 1rem;
+    width: calc(100% - 2rem);
+  }
+
+  @media (max-width: 480px) {
+    margin: 1rem auto;
+    padding: 0 0.75rem;
+    width: calc(100% - 1.5rem);
+  }
 `;
 
 export const SearchInput = styled.input`
@@ -530,11 +544,22 @@ export const SearchInput = styled.input`
   transition: all 0.3s ease;
   background: white;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  box-sizing: border-box;
 
   &:focus {
     outline: none;
     border-color: #007bff;
     box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.1);
+  }
+
+  @media (max-width: 768px) {
+    padding: 0.875rem 1.25rem;
+    font-size: 0.95rem;
+  }
+
+  @media (max-width: 480px) {
+    padding: 0.75rem 1rem;
+    font-size: 0.9rem;
   }
 
   @media (prefers-color-scheme: dark) {
