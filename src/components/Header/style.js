@@ -12,7 +12,7 @@ export const HeaderContainer = styled.div`
   padding-bottom: 0px;
   backdrop-filter: blur(17px);
   position: fixed;
-  top: ${(props) => (props.isScrolled ? '0px' : '40px')};  /* Adjusted top value */
+  top: ${(props) => (props.isScrolled ? '0px' : '50px')};  /* Adjusted top value */
   transition: top 0.3s ease-in-out;
 `;
 
