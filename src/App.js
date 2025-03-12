@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { HashRouter as Router, Routes, Route } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
 import BlogListing from './pages/blogslisting';
 import Top10CRMs2025 from './pages/blogs/top-10-crms-2025';
@@ -14,7 +14,7 @@ import './App.css';
 function App() {
   return (
     <HelmetProvider>
-      <Router basename={process.env.PUBLIC_URL}>
+      <Router>
         <div className="App">
           <Routes>
             <Route path="/" element={<BlogListing />} />
