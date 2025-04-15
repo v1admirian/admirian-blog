@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-US">
   <head>
     <meta charset="utf-8" />
     <link rel="icon" href="https://static.admirian.com/favicon.ico" />
@@ -30,9 +30,11 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
     
     <!-- SEO Meta Tags -->
-    <meta name="robots" content="index, follow" />
+    <meta name="robots" content="index, follow, max-image-preview:large" />
     <meta name="author" content="Admirian" />
     <meta name="keywords" content="influencer marketing, CRM, influencer campaigns, ROI optimization, social media marketing, brand partnerships, influencer management" />
+    <meta name="geo.region" content="US" />
+    <meta name="geo.placename" content="United States" />
     
     <!-- Open Graph / Facebook -->
     <meta property="og:site_name" content="Admirian Blog" />
@@ -41,6 +43,8 @@
     <meta property="og:title" content="Admirian Blog | Influencer Marketing Insights" />
     <meta property="og:description" content="Expert insights on influencer marketing, CRM strategies, and campaign optimization for brands and agencies." />
     <meta property="og:image" content="https://static.admirian.com/blog-header-image.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
     
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image" />
@@ -48,6 +52,7 @@
     <meta name="twitter:title" content="Admirian Blog | Influencer Marketing Insights" />
     <meta name="twitter:description" content="Expert insights on influencer marketing and CRM strategies" />
     <meta name="twitter:image" content="https://static.admirian.com/blog-header-image.jpg" />
+    <meta name="twitter:site" content="@admirian" />
     
     <!-- Structured Data -->
     <script type="application/ld+json">
@@ -64,6 +69,11 @@
             "@type": "ImageObject",
             "url": "https://static.admirian.com/9a312601-984e-4237-bfad-1454204ce38f_BrandLogo.svg"
           }
+        },
+        "potentialAction": {
+          "@type": "SearchAction",
+          "target": "https://blogs.admirian.com/search?q={search_term_string}",
+          "query-input": "required name=search_term_string"
         }
       }
     </script>

@@ -186,7 +186,7 @@ const BlogListing = () => {
 
       <Header  isMobile = {isMobile}>
 
-        </Header>
+      </Header>
       <a href="https://admirian.com/request-demo" style={{ textDecoration: 'none' }}>
         <AnnouncementContainer isMobile={isMobile}>
           <span>
