@@ -111,7 +111,7 @@ const NanoInfluencers2025 = () => {
           <BlogCategory>For Brands</BlogCategory>
           <BlogTitle>Nano-Influencers: 2025's Tiny Titans of Influence</BlogTitle>
           <BlogMeta>
-            <span>March 5, 2024</span>
+            <span>March 5, 2025</span>
             <span>12 min read</span>
             <span>By Admirian Team</span>
           </BlogMeta>

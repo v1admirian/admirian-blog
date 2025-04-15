@@ -93,7 +93,7 @@ const MicroVsMacroBlog = () => {
           <BlogCategory>Case Studies</BlogCategory>
           <BlogTitle>Micro vs. Macro Influencers: Who Wins the ROI Game in 2025?</BlogTitle>
           <BlogMeta>
-            <span>March 4, 2024</span>
+            <span>March 4, 2025</span>
             <span>12 min read</span>
           </BlogMeta>
         </BlogHeader>

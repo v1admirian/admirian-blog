@@ -30,87 +30,107 @@ import {
 } from './style';
 import { isMobile } from '../../components/utils/constants';
 
+// Sample blog data with trend-focused articles
+const blogs = [
+  {
+    id: 1,
+    title: "AI in Influencer Marketing: The Future of Creator Economy 2025",
+    excerpt: "Discover how AI is revolutionizing influencer marketing in 2025. Learn about AI-powered creator discovery, content optimization, and ROI prediction tools that are transforming the industry.",
+    date: "March 20, 2025",
+    readTime: "10 min read",
+    category: "For Agency",
+    image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=800&auto=format&fit=crop&q=60",
+    link: "#/blogs/ai-influencer-marketing-2025"
+  },
+  {
+    id: 2,
+    title: "Creator Economy Monetization: New Revenue Streams in 2025",
+    excerpt: "Explore the latest monetization strategies in the creator economy for 2025. Learn about emerging revenue streams, platform innovations, and how creators are maximizing their earning potential.",
+    date: "March 21, 2025",
+    readTime: "12 min read",
+    category: "For Brands",
+    image: "https://images.unsplash.com/photo-1551434678-e076c223a692?w=800&auto=format&fit=crop&q=60",
+    link: "#/blogs/creator-economy-monetization-2025"
+  },
+  {
+    id: 3,
+    title: "Top 10 Influencer Marketing CRMs to Watch in 2025",
+    excerpt: "An in-depth comparison of leading influencer marketing platforms, featuring Admirian's innovative approach to automation and ROI tracking. Discover which CRM fits your needs in 2025.",
+    date: "March 6, 2025",
+    readTime: "15 min read",
+    category: "For Agency",
+    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&auto=format&fit=crop&q=60",
+    link: "#/blogs/top-10-crms-2025"
+  },
+  {
+    id: 4,
+    title: "Nano-Influencers: 2025's Tiny Titans of Influence",
+    excerpt: "Nano-influencers might sound small—think 1,000 to 10,000 followers—but in 2025, they're proving size isn't everything. These tiny titans of influence are flipping the script on influencer marketing, delivering sky-high engagement, authentic vibes, and ROI that leaves bigger names in the dust.",
+    date: "March 5, 2025",
+    readTime: "12 min read",
+    category: "For Brands",
+    image: "https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?w=800&auto=format&fit=crop&q=60",
+    link: "#/blogs/nano-influencers-2025"
+  },
+  {
+    id: 5,
+    title: "Micro vs. Macro Influencers: Who Wins the ROI Game in 2025?",
+    excerpt: "A data-driven analysis of influencer tiers and their impact on campaign performance, backed by real campaign metrics.",
+    date: "March 1, 2025",
+    readTime: "12 min read",
+    category: "Case Studies",
+    image: "https://images.unsplash.com/photo-1557804506-669a67965ba0?w=800&auto=format&fit=crop&q=60",
+    link: "#/blogs/micro-vs-macro-influencers"
+  },
+  {
+    id: 6,
+    title: "How to Negotiate with Influencers: Scripts and Strategies That Work",
+    excerpt: "Expert negotiation templates and proven approaches to secure win-win partnerships with influencers at any level.",
+    date: "March 3, 2025",
+    readTime: "15 min read",
+    category: "For Agency",
+    image: "https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&auto=format&fit=crop&q=60",
+    link: "#/blogs/how-to-negotiate-with-influencers"
+  },
+  {
+    id: 7,
+    title: "Agency Success: Managing 1000+ Influencers with Admirian",
+    excerpt: "How a leading marketing agency scaled their influencer operations while reducing management time by 70%.",
+    date: "March 2, 2025",
+    readTime: "8 min read",
+    category: "Case Studies",
+    image: "https://images.unsplash.com/photo-1553877522-43269d4ea984?w=800&auto=format&fit=crop&q=60",
+    link: "#/blogs/agency-success-1000-influencers"
+  },
+  {
+    id: 8,
+    title: "The Brand's Playbook to Influencer Content Rights",
+    excerpt: "A comprehensive guide to content licensing, usage rights, and creating influencer contracts that protect your brand.",
+    date: "March 1, 2025",
+    readTime: "9 min read",
+    category: "For Brands",
+    image: "https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?w=800&auto=format&fit=crop&q=60",
+    link: "#/blogs/influencer-content-rights"
+  },
+  {
+    id: 9,
+    title: "How to Use CRM Tools Like Admirian to Streamline Influencer Campaigns",
+    excerpt: "A comprehensive guide on leveraging CRM tools like Admirian to manage influencer campaigns efficiently, track performance, and maximize ROI.",
+    date: "March 31, 2025",
+    readTime: "10 min read",
+    category: "For Brands",
+    image: "https://images.unsplash.com/photo-1611162616475-46b635cb6868?w=800&auto=format&fit=crop&q=60",
+    link: "#/blogs/how-to-use-crm-tools"
+  }
+];
+
+// Predefined categories in specific order
+const categories = ['All', 'For Agency', 'For Brands', 'Case Studies'];
+
 const BlogListing = () => {
   const [searchQuery, setSearchQuery] = useState('');
   const [activeCategory, setActiveCategory] = useState('All');
-  const [filteredBlogs, setFilteredBlogs] = useState([]);
-
-  // Sample blog data with trend-focused articles
-  const blogs = [
-    {
-      id: 1,
-      title: "Top 10 Influencer Marketing CRMs to Watch in 2025",
-      excerpt: "An in-depth comparison of leading influencer marketing platforms, featuring Admirian's innovative approach to automation and ROI tracking. Discover which CRM fits your needs in 2025.",
-      date: "March 6, 2024",
-      readTime: "15 min read",
-      category: "For Agency",
-      image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&auto=format&fit=crop&q=60",
-      link: "#/blogs/top-10-crms-2025"
-    },
-    {
-      id: 2,
-      title: "Nano-Influencers: 2025's Tiny Titans of Influence",
-      excerpt: "Nano-influencers might sound small—think 1,000 to 10,000 followers—but in 2025, they're proving size isn't everything. These tiny titans of influence are flipping the script on influencer marketing, delivering sky-high engagement, authentic vibes, and ROI that leaves bigger names in the dust.",
-      date: "March 5, 2024",
-      readTime: "12 min read",
-      category: "For Brands",
-      image: "https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?w=800&auto=format&fit=crop&q=60",
-      link: "#/blogs/nano-influencers-2025"
-    },
-    {
-      id: 3,
-      title: "Micro vs. Macro Influencers: Who Wins the ROI Game in 2025?",
-      excerpt: "A data-driven analysis of influencer tiers and their impact on campaign performance, backed by real campaign metrics.",
-      date: "March 4, 2024",
-      readTime: "12 min read",
-      category: "Case Studies",
-      image: "https://images.unsplash.com/photo-1557804506-669a67965ba0?w=800&auto=format&fit=crop&q=60",
-      link: "#/blogs/micro-vs-macro-influencers"
-    },
-    {
-      id: 4,
-      title: "How to Negotiate with Influencers: Scripts and Strategies That Work",
-      excerpt: "Expert negotiation templates and proven approaches to secure win-win partnerships with influencers at any level.",
-      date: "March 3, 2024",
-      readTime: "15 min read",
-      category: "For Agency",
-      image: "https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&auto=format&fit=crop&q=60",
-      link: "#/blogs/how-to-negotiate-with-influencers"
-    },
-    {
-      id: 5,
-      title: "Agency Success: Managing 1000+ Influencers with Admirian",
-      excerpt: "How a leading marketing agency scaled their influencer operations while reducing management time by 70%.",
-      date: "March 2, 2024",
-      readTime: "8 min read",
-      category: "Case Studies",
-      image: "https://images.unsplash.com/photo-1553877522-43269d4ea984?w=800&auto=format&fit=crop&q=60",
-      link: "#/blogs/agency-success-1000-influencers"
-    },
-    {
-      id: 6,
-      title: "The Brand's Playbook to Influencer Content Rights",
-      excerpt: "A comprehensive guide to content licensing, usage rights, and creating influencer contracts that protect your brand.",
-      date: "March 1, 2024",
-      readTime: "9 min read",
-      category: "For Brands",
-      image: "https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?w=800&auto=format&fit=crop&q=60",
-      link: "#/blogs/influencer-content-rights"
-    },
-    {
-      id: 7,
-      title: "How to Use CRM Tools Like Admirian to Streamline Influencer Campaigns",
-      excerpt: "A comprehensive guide on leveraging CRM tools like Admirian to manage influencer campaigns efficiently, track performance, and maximize ROI.",
-      date: "March 31, 2024",
-      readTime: "10 min read",
-      category: "For Brands",
-      image: "https://images.unsplash.com/photo-1611162616475-46b635cb6868?w=800&auto=format&fit=crop&q=60",
-      link: "#/blogs/how-to-use-crm-tools"
-    }
-  ];
-
-  // Predefined categories in specific order
-  const categories = ['All', 'For Agency', 'For Brands', 'Case Studies'];
+  const [filteredBlogs, setFilteredBlogs] = useState(blogs);
 
   // Filter blogs based on search query and category
   useEffect(() => {
@@ -129,12 +149,7 @@ const BlogListing = () => {
     }
 
     setFilteredBlogs(filtered);
-  }, [searchQuery, activeCategory, blogs]);
-
-  // Initialize filtered blogs
-  useEffect(() => {
-    setFilteredBlogs(blogs);
-  }, []);
+  }, [searchQuery, activeCategory]);
 
   return (
     <BlogListingContainer>

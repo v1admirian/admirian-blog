@@ -9,6 +9,8 @@ import NegotiationBlog from './pages/blogs/how-to-negotiate-with-influencers';
 import AgencySuccessBlog from './pages/blogs/agency-success-1000-influencers';
 import ContentRightsBlog from './pages/blogs/influencer-content-rights';
 import CRMToolsBlog from './pages/blogs/how-to-use-crm-tools';
+import AIInfluencerMarketing from './pages/blogs/ai-influencer-marketing-2025';
+import CreatorEconomyMonetization from './pages/blogs/creator-economy-monetization-2025';
 import './App.css';
 
 function App() {
@@ -25,6 +27,8 @@ function App() {
             <Route path="/blogs/agency-success-1000-influencers" element={<AgencySuccessBlog />} />
             <Route path="/blogs/influencer-content-rights" element={<ContentRightsBlog />} />
             <Route path="/blogs/how-to-use-crm-tools" element={<CRMToolsBlog />} />
+            <Route path="/blogs/ai-influencer-marketing-2025" element={<AIInfluencerMarketing />} />
+            <Route path="/blogs/creator-economy-monetization-2025" element={<CreatorEconomyMonetization />} />
           </Routes>
         </div>
       </Router>

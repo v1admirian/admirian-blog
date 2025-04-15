@@ -93,7 +93,7 @@ const ContentRightsBlog = () => {
           <BlogCategory>For Brands</BlogCategory>
           <BlogTitle>The Brand's Playbook to Influencer Content Rights</BlogTitle>
           <BlogMeta>
-            <span>March 1, 2024</span>
+            <span>March 1, 2025</span>
             <span>9 min read</span>
           </BlogMeta>
         </BlogHeader>

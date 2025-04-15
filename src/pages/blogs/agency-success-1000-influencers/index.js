@@ -93,7 +93,7 @@ const AgencySuccessBlog = () => {
           <BlogCategory>Case Studies</BlogCategory>
           <BlogTitle>Agency Success: Managing 1000+ Influencers with Admirian</BlogTitle>
           <BlogMeta>
-            <span>March 2, 2024</span>
+            <span>March 2, 2025</span>
             <span>8 min read</span>
           </BlogMeta>
         </BlogHeader>

@@ -93,7 +93,7 @@ const NegotiationBlog = () => {
           <BlogCategory>For Agency</BlogCategory>
           <BlogTitle>How to Negotiate with Influencers: Scripts and Strategies That Work</BlogTitle>
           <BlogMeta>
-            <span>March 3, 2024</span>
+            <span>March 3, 2025</span>
             <span>15 min read</span>
           </BlogMeta>
         </BlogHeader>

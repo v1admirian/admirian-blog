@@ -93,7 +93,7 @@ const CRMToolsBlog = () => {
           <BlogCategory>For Brands</BlogCategory>
           <BlogTitle>How to Use CRM Tools Like Admirian to Streamline Influencer Campaigns</BlogTitle>
           <BlogMeta>
-            <span>March 31, 2024</span>
+            <span>March 31, 2025</span>
             <span>10 min read</span>
           </BlogMeta>
         </BlogHeader>

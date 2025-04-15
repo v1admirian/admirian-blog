@@ -258,7 +258,7 @@ const Top10CRMs2025 = () => {
           <BlogCategory>For Agency</BlogCategory>
           <BlogTitle>Top 10 Influencer Marketing CRMs to Watch in 2025</BlogTitle>
           <BlogMeta>
-            <span>March 6, 2024</span>
+            <span>March 6, 2025</span>
             <span>15 min read</span>
             <span>By Admirian Team</span>
           </BlogMeta>
