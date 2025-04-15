@@ -439,7 +439,7 @@ const CreatorEconomyMonetization = () => {
                     marginBottom: '20px'
                   }}
                 >
-                  <BlogRelatedImage style={{ height: '200px', overflow: 'hidden' }}>
+                  <BlogRelatedImage>
                     <img 
                       src={article.image.replace('w=800', 'w=600').replace('q=60', 'q=90')} 
                       alt={article.title} 
@@ -448,20 +448,15 @@ const CreatorEconomyMonetization = () => {
                       loading="lazy"
                       style={{ 
                         width: '100%', 
-                        height: '100%', 
-                        objectFit: 'cover',
-                        transition: 'transform 0.3s ease',
-                        ':hover': {
-                          transform: 'scale(1.05)'
-                        }
+                        height: '100%',
+                        objectFit: 'cover'
                       }}
                     />
                   </BlogRelatedImage>
-                  <BlogRelatedContent style={{ padding: '15px' }}>
-                    <BlogRelatedTitle style={{ fontSize: '18px', marginBottom: '8px' }}>{article.title}</BlogRelatedTitle>
-                    <BlogRelatedMeta style={{ fontSize: '14px', color: '#666' }}>
+                  <BlogRelatedContent>
+                    <BlogRelatedTitle>{article.title}</BlogRelatedTitle>
+                    <BlogRelatedMeta>
                       <span>{article.date}</span>
-                      <span style={{ margin: '0 8px' }}>•</span>
                       <span>{article.readTime}</span>
                     </BlogRelatedMeta>
                   </BlogRelatedContent>

@@ -1,5 +1,60 @@
 import styled, { keyframes } from 'styled-components';
 
+// Theme variables
+const colors = {
+  primary: {
+    light: '#4A6FFF',
+    main: '#3B5AFB',
+    dark: '#2A4AE8',
+    contrast: '#FFFFFF'
+  },
+  secondary: {
+    light: '#FF6B6B',
+    main: '#FF5252',
+    dark: '#E63946',
+    contrast: '#FFFFFF'
+  },
+  neutral: {
+    50: '#F9FAFB',
+    100: '#F3F4F6',
+    200: '#E5E7EB',
+    300: '#D1D5DB',
+    400: '#9CA3AF',
+    500: '#6B7280',
+    600: '#4B5563',
+    700: '#374151',
+    800: '#1F2937',
+    900: '#111827'
+  },
+  success: '#10B981',
+  warning: '#F59E0B',
+  error: '#EF4444',
+  info: '#3B82F6'
+};
+
+const shadows = {
+  sm: '0 1px 2px 0 rgba(0, 0, 0, 0.05)',
+  md: '0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)',
+  lg: '0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)',
+  xl: '0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)',
+  inner: 'inset 0 2px 4px 0 rgba(0, 0, 0, 0.06)',
+  none: 'none'
+};
+
+const transitions = {
+  default: 'all 0.3s ease',
+  fast: 'all 0.15s ease',
+  slow: 'all 0.5s ease'
+};
+
+const borderRadius = {
+  sm: '0.25rem',
+  md: '0.5rem',
+  lg: '1rem',
+  xl: '1.5rem',
+  full: '9999px'
+};
+
 const float = keyframes`
   0% { transform: translateY(0px); }
   50% { transform: translateY(-20px); }
@@ -372,14 +427,40 @@ export const AIStatLabel = styled.div`
 `;
 
 export const AIImage = styled.div`
-  margin: 3rem 0;
-  border-radius: 12px;
+  margin: 2rem auto;
+  border-radius: ${borderRadius.md};
   overflow: hidden;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  box-shadow: ${shadows.lg};
+  max-width: 60%;
+  height: auto;
+  position: relative;
+  
+  @media (max-width: 768px) {
+    max-width: 100%;
+  }
+  
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 30%;
+    background: linear-gradient(to top, rgba(0,0,0,0.3), transparent);
+    pointer-events: none;
+  }
   
   img {
-   
+    width: 100%;
+    height: auto;
+    max-height: 300px;
     object-fit: cover;
+    display: block;
+    transition: ${transitions.default};
+  }
+  
+  &:hover img {
+    transform: scale(1.02);
   }
 `;
 
@@ -573,6 +654,10 @@ export const BlogRelatedItem = styled.a`
 export const BlogRelatedImage = styled.div`
   height: 200px;
   overflow: hidden;
+  
+  @media (max-width: 768px) {
+    height: 180px;
+  }
   
   img {
     width: 100%;

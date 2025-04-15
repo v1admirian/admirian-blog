@@ -509,6 +509,10 @@ export const AIImage = styled.div`
   height: auto;
   position: relative;
   
+  @media (max-width: 768px) {
+    max-width: 100%;
+  }
+  
   &::after {
     content: '';
     position: absolute;
@@ -749,6 +753,10 @@ export const BlogRelatedItem = styled.a`
 export const BlogRelatedImage = styled.div`
   height: 200px;
   overflow: hidden;
+  
+  @media (max-width: 768px) {
+    height: 180px;
+  }
   
   img {
     width: 100%;
